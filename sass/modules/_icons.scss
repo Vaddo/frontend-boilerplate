@@ -1,0 +1,44 @@
+// @font-face {
+//   font-family: 'fontello';
+//   src: url('../fonts/fontello.eot?91601083');
+//   src: url('../fonts/fontello.eot?91601083#iefix') format('embedded-opentype'),
+//        url('../fonts/fontello.woff?91601083') format('woff'),
+//        url('../fonts/fontello.ttf?91601083') format('truetype'),
+//        url('../fonts/fontello.svg?91601083#fontello') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size:1em;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+}
+
+$icon-2x:1.2em;
+$icon-3x:1.4em;
+$icon-4x:1.8em;
+$icon-5x:2.4em;
+
+.icon-2x{font-size:$icon-2x;}
+.icon-3x{font-size:$icon-3x;}
+.icon-4x{font-size:$icon-4x;}
+.icon-5x{font-size:$icon-5x;}
+
+// here some icons...
