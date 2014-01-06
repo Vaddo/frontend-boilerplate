@@ -21,7 +21,7 @@
   position:relative;
   @include position($args);
 }
-@mixin noSelect(){user-select: none;}
+@mixin no-select(){user-select: none;}
 
 // Sprite mixin based on -> https://gist.github.com/thulstrup/2140082 -> rstacruz
 @mixin sprite($name){

@@ -1,0 +1,19 @@
+.layout-left{float:  left;}
+.layout-right{float: right;}
+.layout-clear{clear: both;}
+
+.layout-col{
+    float:         left;
+    padding-right: $theme-space;
+}
+.layout-col-last{padding-right: 0;}
+.layout-col-5{width:   5%;}
+.layout-col-10{width:  10%;}
+.layout-col-15{width:  15%;}
+.layout-col-25{width:  25%;}
+.layout-col-33{width:  33.3%;}
+.layout-col-50{width:  50%;}
+.layout-col-75{width:  75%;}
+.layout-col-100{width: 99.9%;}
+
+.layout-space-bottom{margin-bottom:$theme-space;}
