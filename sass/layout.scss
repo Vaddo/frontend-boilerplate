@@ -1,10 +1,11 @@
+@import "themes/classic";
+
 @import "libs/normalize";
 @import "libs/mixins";
-@import "libs/theme";
-@import "modules/text";
-@import "modules/base";
-@import "modules/icons";
-@import "modules/layout";
+@import "libs/text";
+@import "libs/layout";
+@import "libs/icons";
 
+@import "modules/base";
 
 //sexy styles here...

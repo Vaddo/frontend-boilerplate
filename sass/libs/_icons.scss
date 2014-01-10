@@ -1,0 +1,27 @@
+[class^="icon-"], [class*=" icon-"], .icon {
+  font-family: $icon-font;
+  font-variant: normal;
+  text-transform: none;
+  text-align: center;
+  text-decoration: inherit;
+  font-size: $icon-font-size;
+  line-height: 1;
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-2x{font-size: $icon-2x;}
+.icon-3x{font-size: $icon-3x;}
+.icon-4x{font-size: $icon-4x;}
+.icon-5x{font-size: $icon-5x;}
+
+.icon-color-neutral{color: $theme-back-color-neutral;}
+.icon-color-ok{color:      $theme-fore-color-ok;}
+.icon-color-warn{color:    $theme-fore-color-warn;}
+.icon-color-danger{color:  $theme-fore-color-danger;}
