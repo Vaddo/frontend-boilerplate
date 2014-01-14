@@ -50,3 +50,13 @@
     @include background-size(ceil(image-width(sprite-path($sprites-2x)) / 2), auto);
   }
 }
+@mixin vertical-center{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin horizontal-center{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
