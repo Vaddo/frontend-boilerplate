@@ -14,7 +14,5 @@ $text-big-3x:   1.8em;
 .text-left       {text-align:left;}
 .text-italic      {font-style:italic;}
 .text-bold        {font-weight:bold;}
-.text-description {
-  font-style:italic;
-  font-family: $theme-alt-first;
-}
+.text-description {font-family: $theme-alt-first;}
+.text-important{color:$theme-important;}
