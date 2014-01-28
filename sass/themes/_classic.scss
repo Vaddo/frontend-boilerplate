@@ -39,12 +39,8 @@ $theme-back-color-neutral:     #50c0e8;
 // ------------------------------------------------------------------------ page
 $theme-page-min:     800px;
 $theme-page-max:     1200px;
-$theme-page-sidebar: 16em;
 
-$theme-background:     url("../images/bg.jpg");
-$theme-content:        white;
-$theme-content-border: solid 1px darken(white, 15%);
-
+$theme-background:  #fff;
 $theme-line-height: 1.4em;
 $theme-space:       20px;
 $theme-radius:      3px;
@@ -67,7 +63,6 @@ $text-small-3x: .8em;
 $text-small-4x: .7em;
 $text-big-2x:   1.2em;
 $text-big-3x:   1.4em;
-
 $text-description-color: gray;
 
 
@@ -89,3 +84,4 @@ $icon-2x:        1.2em;
 $icon-3x:        1.4em;
 $icon-4x:        1.8em;
 $icon-5x:        2.4em;
+$icon-6x:        2.8em;
