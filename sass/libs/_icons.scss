@@ -1,28 +1,29 @@
-[class^="icon-"], [class*=" icon-"], .icon {
-  font-family: $icon-font;
-  font-variant: normal;
-  text-transform: none;
-  text-align: center;
+[class^="icon-"], [class*=" icon-"] {
+  font-family:     $theme-icon-font;
+  font-variant:    normal;
+  text-transform:  none;
+  text-align:      center;
   text-decoration: inherit;
-  font-size: $icon-font-size;
-  line-height: 1;
-  display: inline-block;
-  font-weight: normal;
-  font-style: normal;
-  speak: none;
+  font-size:       $theme-icon-font-size;
+  line-height:     1;
+  display:         inline-block;
+  font-weight:     normal;
+  font-style:      normal;
+  speak:           none;
 
   /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing:  antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-2x{font-size: $icon-2x;}
-.icon-3x{font-size: $icon-3x;}
-.icon-4x{font-size: $icon-4x;}
-.icon-5x{font-size: $icon-5x;}
-.icon-6x{font-size: $icon-6x;}
+.icon-small-2x{font-size: $theme-icon-small-2x;}
+.icon-large-2x{font-size: $theme-icon-large-2x;}
+.icon-large-3x{font-size: $theme-icon-large-3x;}
+.icon-large-4x{font-size: $theme-icon-large-4x;}
+.icon-large-5x{font-size: $theme-icon-large-5x;}
+.icon-large-6x{font-size: $theme-icon-large-6x;}
 
-.icon-color-neutral{color: $theme-back-color-neutral;}
-.icon-color-ok{color:      $theme-fore-color-ok;}
-.icon-color-warn{color:    $theme-fore-color-warn;}
-.icon-color-danger{color:  $theme-fore-color-danger;}
+.icon-color-neutral {color: $theme-icon-color-neutral;}
+.icon-color-ok      {color: $theme-icon-color-ok;}
+.icon-color-warn    {color: $theme-icon-color-warn;}
+.icon-color-danger  {color: $theme-icon-color-danger;}

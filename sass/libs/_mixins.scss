@@ -50,15 +50,23 @@
     @include background-size(ceil(image-width(sprite-path($sprites-2x)) / 2), auto);
   }
 }
-@mixin vertical-center{
-    position: relative;
-    top: 50%;
+@mixin centering($direction: 'both'){
+  display:  inline-block;
+  position: relative;
+
+  @if ($direction == 'both'){
+    top:  50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+  }
+  @elseif ($direction == 'v'){
+    top:  50%;
     transform: translateY(-50%);
-}
-@mixin horizontal-center{
-    position: relative;
+  }
+  @elseif ($direction == 'h'){
     left: 50%;
     transform: translateX(-50%);
+  }
 }
 @mixin smartphones(){
   @media only screen
@@ -77,7 +85,7 @@
   content: '';
   display: block;
   position: absolute;
-  height: 0; 
+  height: 0;
   width: 0;
 
   @if ($direction == 'up'){

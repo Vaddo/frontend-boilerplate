@@ -1,18 +1,12 @@
-$text-small-2x: .9em;
-$text-small-3x: .8em;
-$text-small-4x: .7em;
-$text-big-2x:   1.2em;
-$text-big-3x:   1.8em;
+.text-small-2x  {font-size:$theme-text-small-2x;}
+.text-small-3x  {font-size:$theme-text-small-3x;}
+.text-small-4x  {font-size:$theme-text-small-4x;}
+.text-large-2x  {font-size:$theme-text-large-2x;}
+.text-large-3x  {font-size:$theme-text-large-3x;}
+.text-important {color:$theme-text-color-important;}
 
-.text-small-3x    {font-size:$text-small-2x;}
-.text-small-2x    {font-size:$text-small-3x;}
-.text-small-4x    {font-size:$text-small-4x;}
-.text-big-2x        {font-size:$text-big-2x;}
-.text-big-3x        {font-size:$text-big-3x;}
-.text-center      {text-align:center;}
-.text-right       {text-align:right;}
-.text-left       {text-align:left;}
-.text-italic      {font-style:italic;}
-.text-bold        {font-weight:bold;}
-.text-description {font-family: $theme-alt-first;}
-.text-important{color:$theme-important;}
+.text-center    {text-align:center;}
+.text-right     {text-align:right;}
+.text-left      {text-align:left;}
+.text-italic    {font-style:italic;}
+.text-bold      {font-weight:bold;}

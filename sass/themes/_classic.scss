@@ -1,8 +1,3 @@
-// -----------------------------------------------------------------------------
-// ------------------------------------------------------------------------- ALL
-// -----------------------------------------------------------------------------
-
-
 //------------------------------------------------------------------------- font
 @font-face {
   font-family: "ParatypePTSans";
@@ -10,30 +5,30 @@
   font-weight: normal;
   font-style: normal;
 }
-
 $theme-font: "ParatypePTSans";
 $theme-font-size: 1em;
 
 
+
 //----------------------------------------------------------------------- colors
-//darker
-$theme-fore-color-default:     #303030;
-$theme-back-color-default:     gray;
-//lighter
-$theme-fore-color-default-alt: white;
-$theme-back-color-default-alt: #f7f7f7;
+$theme-color-fore-default:     #303030;
+$theme-color-fore-default-alt: white;
+$theme-color-back-default:     gray;
+$theme-color-back-default-alt: #f7f7f7;
 
-$theme-fore-color-danger:      #c0392b;
-$theme-back-color-danger:      #e87352;
+$theme-color-fore-neutral:     #50c0e8;
+$theme-color-back-neutral:     #50c0e8;
 
-$theme-fore-color-ok:          #557920;
-$theme-back-color-ok:          #8dca35;
+$theme-color-fore-ok:          #557920;
+$theme-color-back-ok:          #8dca35;
 
-$theme-fore-color-warn:        #f27935;
-$theme-back-color-warn:        #ffab00;
+$theme-color-fore-warn:        #f27935;
+$theme-color-back-warn:        #ffab00;
 
-// $theme-fore-color-neutral:
-$theme-back-color-neutral:     #50c0e8;
+$theme-color-fore-danger:      #c0392b;
+$theme-color-back-danger:      #e87352;
+
+
 
 
 // ------------------------------------------------------------------------ page
@@ -51,19 +46,13 @@ $theme-radius:      3px;
 // -----------------------------------------------------------------------------
 // --------------------------------------------------------------------- MODULES
 // -----------------------------------------------------------------------------
-
-
-// ----------------------------------------------------------------------- _base
-$theme-content-title: lighten($theme-fore-color-default, 30%);
-
-
 // ----------------------------------------------------------------------- _text
-$text-small-2x: .9em;
-$text-small-3x: .8em;
-$text-small-4x: .7em;
-$text-big-2x:   1.2em;
-$text-big-3x:   1.4em;
-$text-description-color: gray;
+$theme-text-small-2x:        .9em;
+$theme-text-small-3x:        .8em;
+$theme-text-small-4x:        .7em;
+$theme-text-large-2x:        1.2em;
+$theme-text-large-3x:        1.4em;
+$theme-text-color-important: $theme-color-fore-danger;
 
 
 // ---------------------------------------------------------------------- _icons
@@ -77,11 +66,16 @@ $text-description-color: gray;
   font-weight: normal;
   font-style: normal;
 }
-$icon-font:      "icomoon";
-$icon-font-size: 1em;
-$icon-small-2x:  .8em;
-$icon-2x:        1.2em;
-$icon-3x:        1.4em;
-$icon-4x:        1.8em;
-$icon-5x:        2.4em;
-$icon-6x:        2.8em;
+$theme-icon-font:      "icomoon";
+$theme-icon-font-size: 1em;
+$theme-icon-small-2x:  .8em;
+$theme-icon-large-2x:  1.2em;
+$theme-icon-large-3x:  1.4em;
+$theme-icon-large-4x:  1.8em;
+$theme-icon-large-5x:  2.4em;
+$theme-icon-large-6x:  2.8em;
+
+$theme-icon-color-neutral: $theme-color-fore-neutral;
+$theme-icon-color-ok:      $theme-color-fore-ok;
+$theme-icon-color-warn:    $theme-color-fore-warn;
+$theme-icon-color-danger:  $theme-color-fore-danger;
