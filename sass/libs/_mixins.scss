@@ -51,21 +51,30 @@
   }
 }
 @mixin centering($direction: 'both'){
-  display:  inline-block;
+  display:  block;
   position: relative;
 
   @if ($direction == 'both'){
     top:  50%;
     left: 50%;
-    transform: translate(-50% -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
   }
   @elseif ($direction == 'v'){
     top:  50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
   }
   @elseif ($direction == 'h'){
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
   }
 }
 @mixin smartphones(){
@@ -81,31 +90,61 @@
     @content;
   }
 }
-@mixin triangle($direction, $size: 6px, $color: #222){
-  content: '';
-  display: block;
-  position: absolute;
-  height: 0;
-  width: 0;
+@mixin arrow($direction: 'up',
+             $size:      10px,
+             $color:     #222,
+             $align:     'center',
+             $pseudo:    'before'){
+  &:#{$pseudo}{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
 
-  @if ($direction == 'up'){
-    border-bottom: $size solid $color;
-    border-left: 1/2*$size solid transparent;
-    border-right: 1/2*$size solid transparent;
+    @if ($direction == 'up'){
+      top: -$size;
+      border-bottom: $size solid $color;
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+    }
+    @else if ($direction == 'down'){
+      bottom: -$size;
+      border-top: $size solid $color;
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+    }
+    @else if ($direction == 'left'){
+      left: -$size;
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-right: $size solid $color;
+    }
+    @else if ($direction == 'right'){
+      right: -$size;
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-left: $size solid $color;
+    }
+
+    @if($direction == 'up' or
+        $direction == 'down'){
+      @if($align == 'center'){
+        left:50%;
+        margin-left: -$size;
+      }
+      @if($align == 'right'){right:0;}
+    }
+    @if($direction == 'left' or
+        $direction == 'right'){
+      @if($align == 'center'){
+        top:50%;
+        margin-top: -$size;
+      }
+      @if($align == 'right'){bottom:0;}
+    }
   }
-  @else if ($direction == 'down'){
-    border-top: $size solid $color;
-    border-left: 1/2*$size solid transparent;
-    border-right: 1/2*$size solid transparent;
-  }
-  @else if ($direction == 'left'){
-    border-top: 1/2*$size solid transparent;
-    border-bottom: 1/2*$size solid transparent;
-    border-right: $size solid $color;
-  }
-  @else if ($direction == 'right'){
-    border-top: 1/2*$size solid transparent;
-    border-bottom: 1/2*$size solid transparent;
-    border-left: $size solid $color;
-  }
+}
+@mixin tooltip(){
+
 }
