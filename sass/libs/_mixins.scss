@@ -50,9 +50,9 @@
     @include background-size(ceil(image-width(sprite-path($sprites-2x)) / 2), auto);
   }
 }
-@mixin centering($direction: 'both'){
+@mixin centering($direction: 'both', $pos: absolute){
   display:  block;
-  position: relative;
+  position: $pos;
 
   @if ($direction == 'both'){
     top:  50%;
@@ -145,6 +145,50 @@
     }
   }
 }
-@mixin tooltip(){
+//
+//
+//
+@mixin tooltip($direction: 'up',
+               $color:     #fff,
+               $bgcolor:   #222){
+  $height: 20px;
+  $arrow:  10px;
 
+  &:hover{
+    &:before, &:after{
+      z-index: 99;
+    }
+    &:after{
+      content:          attr(data-tooltip);
+      display:          inline-block;
+      color:            $color;
+      background-color: $bgcolor;
+      padding:          6px;
+      height:           $height;
+      white-space:      nowrap;
+    }
+
+    @if ($direction == 'up'){
+      &:after{
+        top: -$height*2;
+        @include centering('h');
+      }
+      @include arrow($direction: 'down',
+                     $size:      $arrow,
+                     $color:     $bgcolor,
+                     $pseudo:    'before');
+      &:before{top: -$arrow;}
+    }
+    @else if ($direction == 'down'){
+      &:after{
+        bottom: -$height*2;
+        @include centering('h');
+      }
+      @include arrow($direction: 'up',
+                     $size:      $arrow,
+                     $color:     $bgcolor,
+                     $pseudo:    'before');
+      &:before{top: $arrow*2;}
+    }
+  }
 }

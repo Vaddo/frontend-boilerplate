@@ -9,3 +9,11 @@
 @import "modules/base";
 
 //sexy styles here...
+.layout-xxx{
+    @include absolute(0 0 0 0);
+
+    a{
+        @include centering;
+        @include tooltip('up');
+    }
+}
