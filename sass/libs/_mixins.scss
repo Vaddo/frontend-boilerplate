@@ -15,6 +15,15 @@
 }
 @mixin fixed($args){
   position:fixed;
+  
+  //
+  // Improving the CSS performance of fixed position elements
+  // http://benfrain.com/improving-css-performance-fixed-position-elements
+  //
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
   @include position($args);
 }
 @mixin relative($args){
