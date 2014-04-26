@@ -1,6 +1,14 @@
 .layout-left  {float: left;}
 .layout-right {float: right;}
-.layout-clear {clear: both;}
+// clearfix
+.layout-clear {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {clear: both;}
+}
 .layout-centering            {@include centering();}
 .layout-centering-vertical   {@include centering('v');}
 .layout-centering-horizontal {@include centering('h');}
